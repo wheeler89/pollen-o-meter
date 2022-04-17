@@ -1,7 +1,7 @@
-let forecast_array = ["today", "tomorrow", "dayafter_to"]
-let forecast = forecast_array[0]
-//let dataSource = "https://opendata.dwd.de/climate_environment/health/alerts/s31fg.json" // not working cause of cors policy
-let dataSource = "https://wheeler89.github.io/pollen-o-meter/testdata.json"  // use test dataset instead for github demonstration
+// use MODIFIED test dataset (Source: Deutscher Wetterdienst) for github function demonstration
+let testdataSource = "https://wheeler89.github.io/pollen-o-meter/testdata.json"  
+//let testdataSource = "https://opendata.dwd.de/climate_environment/health/alerts/s31fg.json" // not working cause of cors policy, static page on github
+// for a live mechanism use your own server to request data
 
 // BEGINN HELPER FUNCTIONS
 function decodeColor(contentVal){
@@ -47,7 +47,6 @@ else if (contentVal == 2.5) { return "2-3" }
 else if (contentVal == 3) { return "3" }
 else { return "-1" }
 }
-// END HELPER FUNCTIONS
 
 // determine higehst pollen risk id value for a single federal state
 function getMaxPollenRisk(subreg){
@@ -56,20 +55,22 @@ let values = []
 if (Array.isArray(subreg)){
     subreg.forEach(e => {
         Object.values(e.Pollen).forEach((value) => {
-            values.push(decodeRisk(value[forecast]))
+            values.push(decodeRisk(value["today"]))
         })
     });
 } else {
     Object.values(subreg.Pollen).forEach((value) => {
-        values.push(decodeRisk(value[forecast]))
+        values.push(decodeRisk(value["today"]))
     });
 }
 return (encodeRisk(Math.max(...values)));
 }
+// END HELPER FUNCTIONS
 
-// initialize max. pollen risk forecast
+// INITIALIZE MAX POLLEN RISK MAP
 function initMap(){
-fetch(dataSource)
+//fetch("/database") //used for own server
+fetch("testdataSource")
     .then( response => response.json() )
     .then( pollenData => {
         // aside: set max pollen risk colors of svg map paths
@@ -123,11 +124,12 @@ fetch(dataSource)
     });
 }
 
-// BEGIN navigate() FUNCTIONS
+// BEGIN NAVIGATION FUNCTIONS
 function loadPage(name, e) {
     // check if website already loaded
     if ( (e.querySelectorAll("*").length === 0) && (name!="LANDING") ) {
-        fetch(dataSource)
+        //fetch("/database") //used for own server
+        fetch("testdataSource")
             .then( response => response.json() )
             .then( pollenData => {
                 // sections: dynamic content, only load clicked items once in single session
@@ -187,7 +189,7 @@ function loadPage(name, e) {
                         let tbody_td = document.createElement("td")
                         tbody_tr_pollen.appendChild(tbody_td)
                         tbody_td.className = "pollen "+ key 
-                        tbody_td.style=`background-color:${decodeColor(value[forecast])+"BF"};`
+                        tbody_td.style=`background-color:${decodeColor(value["today"])+"BF"};`
                     });
                 });
             });
@@ -223,7 +225,7 @@ function navigate(section) {
     else if (location.hash == "#BY"){showSection("BY")} 
     else {showSection("LANDING")}
 }
-// END navigate() FUNCTIONS
+// END NAVIGATION FUNCTIONS
 
 // EventListener Pollen-O-Meter
 window.addEventListener("load", () => {

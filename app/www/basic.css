@@ -1,0 +1,163 @@
+/* GLOBAL SETTINGS */
+* {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container > div {
+  display: flex;
+  color: #000000;
+  font-size: 1em;
+}
+html, body {
+  font: 12px/1.0 Arial, Helvetica, sans-serif;
+  background-color: #ececec;
+  margin: 0;
+}
+
+/* LOCAL SETTINGS */
+/* header */
+.container > div:nth-child(1n) {
+  background-color: #08909f;
+}
+.header{
+  border-bottom: 7px solid #ffffff;
+  margin-bottom: 7px;
+}
+header{
+  display: flex;
+  text-align: center;
+}
+h1#LANDING a {
+  text-decoration: none;
+  color: #ffffff;
+}
+h1#LANDING a:hover {
+  opacity: 75%;
+}
+
+/* aside */
+.container > div:nth-child(2n) {
+  background-color: #ececec00;
+}
+aside {
+  text-align: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #ffffff;
+  box-shadow: 7px 7px 14px rgba(0,0,0,0.2);
+  border-radius: 17px 17px 14px 14px;
+}
+aside h2 {
+  padding: 20px;
+  background-color: #08909f;
+  margin: 0;
+  border-radius: 18px 14px 0 0;
+}
+aside svg {
+  margin: 4px;
+}
+.federalState { 
+  opacity: 75%; 
+}
+.federalState:hover { 
+  opacity: 100%; 
+}
+
+/* article */
+.container > div:nth-child(3n) {
+  background-color: #ececec00;
+}
+.article {
+  text-align: center;  
+}
+article {
+  background-color: #ffffff;
+  box-shadow: 7px 7px 14px rgba(0,0,0,0.2);
+  border-radius: 14px;
+  color: #08909f;
+  min-width: 211px;
+}
+article h3 {
+  padding: 7px 0;
+  font-size: larger;
+  background-color: #08909f;
+  color: #ffffff;
+  border-radius: 14px 14px 0 0;
+  margin: 0 0 7px;
+}
+article p {
+  font-size: smaller;
+  margin: 7px 3px 3px 0;
+
+}
+article ul {
+  padding: 1px 0;
+  bottom: 30px;
+  display: flex;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 4px;
+}
+article li {
+  padding: 1px;
+  font-size: x-small;
+  list-style-type: none;
+  border-color: white;
+  width: 50px;
+  margin: 2px;
+  border-radius: 4px;
+}
+
+/* section */
+.container > div:nth-child(4n) {
+  background-color: #ececec00;
+}
+section { 
+  background-color: #ffffff;
+  box-shadow: 7px 7px 14px rgba(0,0,0,0.2);
+  border-radius: 14px;
+}
+section table{
+  padding: 4px 10px 7px 10px;
+  table-layout: auto;
+  width: 100%;
+}
+table caption {
+  padding: 7px 0;
+  background-color: #08909f;
+  color: #ffffff;
+  border-radius: 14px 14px 0 0;
+}
+table thead tr th{
+  color: black;
+  writing-mode:vertical-rl;
+  text-align: right;
+  font-size: x-small;
+  margin: 0 20px;
+}
+table tbody td {
+  padding-top: 4px;
+  font-size: small;
+  color: #08909f;
+}
+.pollen{ 
+  padding: 0 2px;
+  height: 7px;
+  border-radius: 14px; 
+} 
+
+/* footer */
+.container > div:nth-child(5n) {
+  padding: 7px 14px;
+  background-color: #ffffff;
+  font-size: small;
+  border-top: 7px solid #08909f;
+  text-align: center;
+  font-style:italic;
+  margin-top: 7px;
+}
+
+/* enable SPA possibility */
+.hidden {
+  display: none;
+}

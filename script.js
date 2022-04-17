@@ -69,7 +69,7 @@ return (encodeRisk(Math.max(...values)));
 
 // initialize max. pollen risk forecast
 function initMap(){
-fetch("testdata.json")
+fetch("https://wheeler89.github.io/pollen-o-meter/testdata.json")
     .then( response => response.json() )
     .then( pollenData => {
         // aside: set max pollen risk colors of svg map paths
@@ -127,7 +127,7 @@ fetch("testdata.json")
 function loadPage(name, e) {
     // check if website already loaded
     if ( (e.querySelectorAll("*").length === 0) && (name!="LANDING") ) {
-        fetch("testdata.json")
+        fetch("https://wheeler89.github.io/pollen-o-meter/testdata.json")
             .then( response => response.json() )
             .then( pollenData => {
                 // sections: dynamic content, only load clicked items once in single session

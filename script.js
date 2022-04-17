@@ -1,8 +1,3 @@
-// use MODIFIED test dataset (Source: Deutscher Wetterdienst) for github function demonstration
-let testdataSource = "https://wheeler89.github.io/pollen-o-meter/testdata.json"  
-//let testdataSource = "https://opendata.dwd.de/climate_environment/health/alerts/s31fg.json" // not working cause of cors policy, static page on github
-// for a live mechanism use your own server to request data
-
 // BEGINN HELPER FUNCTIONS
 function decodeColor(contentVal){
 if (contentVal == "0") { return "#00ed01" }
@@ -69,8 +64,8 @@ return (encodeRisk(Math.max(...values)));
 
 // INITIALIZE MAX POLLEN RISK MAP
 function initMap(){
-//fetch("/database") //used for own server
-fetch("testdataSource")
+//fetch("/database") //used for own server to fetch live data
+fetch("testdata.json")
     .then( response => response.json() )
     .then( pollenData => {
         // aside: set max pollen risk colors of svg map paths
@@ -128,8 +123,8 @@ fetch("testdataSource")
 function loadPage(name, e) {
     // check if website already loaded
     if ( (e.querySelectorAll("*").length === 0) && (name!="LANDING") ) {
-        //fetch("/database") //used for own server
-        fetch("testdataSource")
+        //fetch("/database") //used for own server to fetch live data
+        fetch("testdata.json")
             .then( response => response.json() )
             .then( pollenData => {
                 // sections: dynamic content, only load clicked items once in single session

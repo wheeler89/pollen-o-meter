@@ -1,4 +1,5 @@
 # pollen-o-meter
 Seminararbeit DHBW CAS, Grundlagen Web Engineering
 
-itital testing phase
+This Test-SPA demonstrates its functionality without server and uses modified testdata from source "Deutscher Wetterdienst (DWD)". Purpose of modifiing is to check the functionality of the main information element, which gives visual feedback of the pollen risk for every federal state of germany. The map shows a background color depending on the risk of pollen flight and does not make a difference between specific pollen types. That means, as soon as only one type of pollen of a region or subregan has a high risk on DWD index, the background color of this hole federal state will be changed by a bunch of helper functions. The map of germany is the main interactive navigation element which allows pseudo navigation by event listening hash changes. Detailed pollen risk information will be displayed for a federal state by mouse click on the map (also for subregions, when data from dwd available). The landing page can also be called by click on the title Pollen-O-Meter.
+

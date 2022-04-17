@@ -1,8 +1,7 @@
-// TODO!!!!!!!!!!!!!!!!!!
-// additional stuff set nav on website by forecast
 let forecast_array = ["today", "tomorrow", "dayafter_to"]
 let forecast = forecast_array[0]
-let dataSource = "https://opendata.dwd.de/climate_environment/health/alerts/s31fg.json"
+//let dataSource = "https://opendata.dwd.de/climate_environment/health/alerts/s31fg.json" // not working cause of cors policy
+let dataSource = "https://wheeler89.github.io/pollen-o-meter/testdata.json"  // use test dataset instead for github demonstration
 
 // BEGINN HELPER FUNCTIONS
 function decodeColor(contentVal){
@@ -70,7 +69,6 @@ return (encodeRisk(Math.max(...values)));
 
 // initialize max. pollen risk forecast
 function initMap(){
-//fetch("https://wheeler89.github.io/pollen-o-meter/testdata.json")
 fetch(dataSource)
     .then( response => response.json() )
     .then( pollenData => {
@@ -129,7 +127,6 @@ fetch(dataSource)
 function loadPage(name, e) {
     // check if website already loaded
     if ( (e.querySelectorAll("*").length === 0) && (name!="LANDING") ) {
-        //fetch("https://wheeler89.github.io/pollen-o-meter/testdata.json")
         fetch(dataSource)
             .then( response => response.json() )
             .then( pollenData => {

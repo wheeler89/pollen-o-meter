@@ -1,5 +1,5 @@
 /* grid for desktop and mobile device */
-.container {
+main {
     height: 100%;
     display: grid;
     grid-gap: 28px;
@@ -13,15 +13,15 @@
         "se"
         "fo";
 }
-.header { grid-area: he; }
-.aside { grid-area: as; }
-.article { grid-area: ar; }
-.section { grid-area: se; }
-.footer { grid-area: fo; }
+header { grid-area: he; }
+aside { grid-area: as; }
+article { grid-area: ar; }
+section { grid-area: se; }
+footer { grid-area: fo; }
 
 /* as soon as viewport width is higher than 768px */
 @media only screen and (min-width: 768px) {
-    .container {
+    main {
         height: 100%;
         display: grid;
         grid-gap: 28px;
@@ -30,13 +30,13 @@
         /* desktop container design */
         grid-template-areas: 
             "he he he he he he he he he he he he" 
-            " . . as as as as  . ar ar ar  .  . "
-            " . . as as as as  . se se se  .  . "
+            " . as as as as as as . ar ar ar  . "
+            " . as as as as as as . se se se  . "
             "fo fo fo fo fo fo fo fo fo fo fo fo";   
     }
-    .header { grid-area: he; }
-    .aside { grid-area: as; }
-    .article { grid-area: ar; }
-    .section { grid-area: se; }
-    .footer { grid-area: fo; }
+    header { grid-area: he; }
+    aside { grid-area: as; }
+    article { grid-area: ar; }
+    section { grid-area: se; }
+    footer { grid-area: fo; }
 } /* loc easter egg: the answer to the ultimate question of life */

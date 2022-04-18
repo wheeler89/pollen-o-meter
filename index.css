@@ -26,7 +26,7 @@ footer { grid-area: fo; }
         display: grid;
         grid-gap: 28px;
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 70px 240px 240px 40px;
+        grid-template-rows: 70px auto auto 40px;
         /* desktop container design */
         grid-template-areas: 
             "he he he he he he he he he he he he" 

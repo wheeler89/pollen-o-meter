@@ -30,9 +30,9 @@ footer { grid-area: fo; }
         /* desktop container design */
         grid-template-areas: 
             "he he he he he he he he he he he he" 
-            " . as as as as as as . ar ar ar  . "
-            " . as as as as as as . se se se  . "
-            "fo fo fo fo fo fo fo fo fo fo fo fo";   
+            " . as as as as as  .  ar ar ar ar ."
+            " . as as as as as  .  se se se se ."
+            "fo fo fo fo fo fo fo fo fo fo fo fo";    
     }
     header { grid-area: he; }
     aside { grid-area: as; }

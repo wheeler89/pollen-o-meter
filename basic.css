@@ -1,33 +1,29 @@
 /* GLOBAL SETTINGS */
-* {
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.container > div {
-  display: flex;
-  color: #000000;
-  font-size: 1em;
-}
 html, body {
   font: 12px/1.0 Arial, Helvetica, sans-serif;
   background-color: #ececec;
+  min-width: 260px;
   margin: 0;
 }
-/* enable SPA possibility */
+main{
+  margin: 14px;
+}
+/* essential to enable SPA possibility */
 .hidden {
   display: none;
 }
 
 /* LOCAL SETTINGS */
 /* header */
-.header{
+header{
+  text-align: center;
   background-color: #08909f;
   border-bottom: 7px solid #ffffff;
-  margin-bottom: 7px;
+  margin: 0 0 7px;
 }
-header{
-  display: flex;
-  text-align: center;
+header h1 {
+  margin: 0;
+  padding: 7px;
 }
 h1#LANDING a {
   text-decoration: none;
@@ -40,21 +36,19 @@ h1#LANDING a:hover {
 /* aside */
 aside {
   text-align: center;
-  justify-content: center;
   color: #ffffff;
   background-color: #ffffff;
   box-shadow: 7px 7px 14px rgba(0,0,0,0.2);
   border-radius: 17px 17px 14px 14px;
-  margin: 0 7px;
 }
-aside h2 {
+aside h3 {
   padding: 20px;
   background-color: #08909f;
   margin: 0;
   border-radius: 18px 14px 0 0;
 }
 aside svg {
-  margin: 7px;
+  width: 100%;
 }
 .federalState { 
   opacity: 75%; 
@@ -64,20 +58,16 @@ aside svg {
 }
 
 /* article */
-.article {
-  text-align: center;  
-}
 article {
+  text-align: center;  
+  color: #08909f;
   background-color: #ffffff;
   box-shadow: 7px 7px 14px rgba(0,0,0,0.2);
   border-radius: 14px;
-  color: #08909f;
-  min-width: 211px;
-  margin: 0 7px;
+  min-width: 230px;
 }
 article h3 {
   padding: 7px 0;
-  font-size: larger;
   background-color: #08909f;
   color: #ffffff;
   border-radius: 14px 14px 0 0;
@@ -85,11 +75,12 @@ article h3 {
 }
 article p {
   font-size: smaller;
-  margin: 4px;
+  margin: 4px 4px 0;
 }
 article ul {
   padding: 2px;
   bottom: 30px;
+  width: auto;
   text-align: center;
   color: #000000;
   margin: 0 7px 4px;
@@ -108,6 +99,8 @@ section {
   background-color: #ffffff;
   box-shadow: 7px 7px 14px rgba(0,0,0,0.2);
   border-radius: 14px;
+  min-width: 230px;
+  
 }
 section table{
   padding: 4px 10px 7px 10px;
@@ -139,12 +132,11 @@ table tbody td {
 } 
 
 /* footer */
-.footer {
-  padding: 7px 14px;
-  background-color: #ffffff;
-  font-size: small;
-  border-top: 7px solid #08909f;
+footer > p {
   text-align: center;
+  background-color: #ffffff;
+  border-top: 7px solid #08909f;
+  padding: 4px 0;
+  font-size: x-small;
   font-style:italic;
-  margin-top: 7px;
 }

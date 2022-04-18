@@ -8,7 +8,8 @@ Hint: Most of the HTML content are svg paths, so the percentage of coding HTML, 
 ## live page on github
 https://wheeler89.github.io/pollen-o-meter/
 
-If theres a error 404 when first open this git page, try to add index.html after "/".
+If a error 404 occurs when first open this git page, try to add index.html on its path.
+
 --> https://wheeler89.github.io/pollen-o-meter/index.html
 
 ## author

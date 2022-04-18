@@ -1,37 +1,30 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Single Page Application, SPA, 
-                                    Medizin-Meteorologie, Deutscher Wetterdienst, 
-                                    Pollenflug-Gefahrenindex Deutschland, Pollen-O-Meter">
-    <meta name="author" content="Andreas Räder">
-    <title>Pollen-O-Meter</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="basic.css">
-    <script src="script.js"></script>
-</head>
-<!-- div container and classes layout to easier adjustment via css -->
-<body>
-    <div class="container">
-        <div class="header">
-            <header> 
-                <h1 id="LANDING">
-                    <a href="#LANDING">Pollen-O-Meter</a>
-                </h1>
-            </header>
-        </div>
-
-        <div class="aside">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Single Page Application, SPA, Medizin-Meteorologie, Deutscher Wetterdienst, Pollenflug-Gefahrenindex Deutschland, Pollen-O-Meter">
+        <meta name="author" content="Andreas Räder">
+        <title>Pollen-O-Meter</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="basic.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header> 
+            <h1 id="LANDING">
+                <a href="#LANDING">Pollen-O-Meter</a>
+            </h1>
+        </header>
+        <main>
             <aside>
-                <h2>Pollenflug-Gefahrenindex Deutschland</h2>
+                <h3>Pollenflug-Gefahrenindex Deutschland</h3>
                 <svg 
                     version="1.0" xmlns="http://www.w3.org/2000/svg"
                     width="240pt" height="310.000000pt" viewBox="0 0 960.000000 1280.000000">
                     <g class="gerMap" transform="translate(0.000000,1280.000000) scale(0.10000,-0.1)" fill="grey"  stroke="none"> 
-    
+
                         <!-- region_id:10, svg_id:iSH =Schleswig-Holstein, svg_id:HH =Hamburg -->
                         <a href="#SH"> 
                             <path class="federalState 10" id="iSH" 
@@ -1059,17 +1052,11 @@
                     </g>
                 </svg>
             </aside>
-        </div>
-
-        <div class="article">
             <article id="source">
                 <h3>Quellendaten</h3> 
                 <p>Legende</p>
                 <ul id="legend"></ul>
             </article>
-        </div>
-
-        <div class="section">
             <section id="SH"></section>
             <section id="HH"></section>
             <section id="MV"></section>
@@ -1086,15 +1073,9 @@
             <section id="SL"></section>
             <section id="BW"></section>
             <section id="BY"></section>
-        </div>
-
-        <div class="footer">
-            <footer>    
-                Grundlagen Web Engineering -  
-                Master Informatik @ DHBW CAS WS21/22 -  
-                Seminararbeit SPA, Andreas Räder
-            </footer>
-        </div>
-    </div>
-</body>
+        </main>
+        <footer>
+            <p>Grundlagen Web Engineering - Master Informatik @ DHBW CAS WS21/22 - Seminararbeit SPA, Andreas Räder</p>
+        </footer>
+    </body>
 </html>

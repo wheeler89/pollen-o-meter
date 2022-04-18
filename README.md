@@ -9,10 +9,10 @@ https://wheeler89.github.io/pollen-o-meter/
 If theres a error 404 when first open this git page, try to add index.html after "/".
 --> https://wheeler89.github.io/pollen-o-meter/index.html
 
-### Author
+## Author
 Andreas Räder
 
-#### Sources
+## Sources
 Learn more about the data sources and licences here.
 
 https://opendata.dwd.de/README.txt

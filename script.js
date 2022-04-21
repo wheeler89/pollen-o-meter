@@ -9,18 +9,6 @@ else if (contentVal == "2-3") { return "#eb2c00" }
 else if (contentVal == "3") { return "#ff0000" }
 else { return "#000000" }
 }
-
-function decodeLegend(contentVal){
-if (contentVal == "0") { return "keine Belastung" }
-else if (contentVal == "0-1") { return "keine bis geringe Belastung" }
-else if (contentVal == "1") { return "geringe Belastung" }
-else if (contentVal == "1-2") { return "geringe bis mittlere Belastung" }
-else if (contentVal == "2") { return "mittlere Belastung" }
-else if (contentVal == "2-3") { return "mittlere bis hohe Belastung" }
-else if (contentVal == "3") { return "hohe Belastung" }
-else { return -1 }
-}
-
 function decodeRisk(contentVal){
 if (contentVal == "0") { return 0 }
 else if (contentVal == "0-1") { return 0.5 }
@@ -31,7 +19,6 @@ else if (contentVal == "2-3") { return 2.5 }
 else if (contentVal == "3") { return 3 }
 else { return -1 }
 }
-
 function encodeRisk(contentVal){
 if (contentVal == 0) { return "0" }
 else if (contentVal == 0.5) { return "0-1" }
